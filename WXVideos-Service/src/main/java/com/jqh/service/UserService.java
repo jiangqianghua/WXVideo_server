@@ -15,4 +15,6 @@ public interface UserService {
      * @param user
      */
     public void save(Users user);
+
+    public Users queryUserForLogin(String username,String password);
 }

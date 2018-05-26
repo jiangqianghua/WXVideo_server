@@ -1,4 +1,4 @@
-package com.jqh.pojo;
+package com.jqh.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -7,13 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 
 @ApiModel(value = "用户对象",description = "这是用户对象")
-public class Users {
+public class UsersVo {
     /**
      * 全局唯一id
      */
     @Id
     @ApiModelProperty(hidden = true)
     private String id;
+
+    @ApiModelProperty(hidden = true)
+    private String userToken ;
 
     /**
      * 用户名称
@@ -31,7 +34,6 @@ public class Users {
      * 头像连接
      */
     @ApiModelProperty(hidden = true)
-    @Column(name = "face_image")
     private String faceImage;
 
     /**
@@ -44,21 +46,18 @@ public class Users {
      * 粉丝数量
      */
     @ApiModelProperty(hidden = true)
-    @Column(name = "fans_counts")
     private Integer fansCounts;
 
     /**
      * 关注数量
      */
     @ApiModelProperty(hidden = true)
-    @Column(name = "follow_counts")
     private Integer followCounts;
 
     /**
      * 关注作品的数量
      */
     @ApiModelProperty(hidden = true)
-    @Column(name = "receive_like_counts")
     private Integer receiveLikeCounts;
 
     /**
@@ -203,5 +202,13 @@ public class Users {
      */
     public void setReceiveLikeCounts(Integer receiveLikeCounts) {
         this.receiveLikeCounts = receiveLikeCounts;
+    }
+
+    public String getUserToken() {
+        return userToken;
+    }
+
+    public void setUserToken(String userToken) {
+        this.userToken = userToken;
     }
 }

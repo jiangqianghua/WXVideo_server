@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -33,5 +34,17 @@ public class UserServiceImpl implements UserService {
         String userId = sid.nextShort();
         user.setId(userId);
         userMapper.insert(user);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Users queryUserForLogin(String username, String password) {
+
+        Example userExample = new Example(Users.class);
+        Example.Criteria criteria = userExample.createCriteria();
+        criteria.andEqualTo("username",username);
+        criteria.andEqualTo("password",password);
+        Users result = userMapper.selectOneByExample(userExample);
+        return result ;
     }
 }
