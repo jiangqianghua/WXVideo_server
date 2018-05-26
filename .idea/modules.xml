@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WXVideos.iml" filepath="$PROJECT_DIR$/WXVideos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WXVideos-Common/WXVideos-Common.iml" filepath="$PROJECT_DIR$/WXVideos-Common/WXVideos-Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WXVideos-Mapper/WXVideos-Mapper.iml" filepath="$PROJECT_DIR$/WXVideos-Mapper/WXVideos-Mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WXVideos-Mini-api/WXVideos-Mini-api.iml" filepath="$PROJECT_DIR$/WXVideos-Mini-api/WXVideos-Mini-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WXVideos-Pojo/WXVideos-Pojo.iml" filepath="$PROJECT_DIR$/WXVideos-Pojo/WXVideos-Pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WXVideos-Service/WXVideos-Service.iml" filepath="$PROJECT_DIR$/WXVideos-Service/WXVideos-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-generatorConfig/mybatis-generatorConfig.iml" filepath="$PROJECT_DIR$/mybatis-generatorConfig/mybatis-generatorConfig.iml" />
+    </modules>
+  </component>
+</project>

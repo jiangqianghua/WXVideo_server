@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-generatorConfig" />
+        <module name="WXVideos-Common" />
+        <module name="WXVideos-common" />
+        <module name="WXVideos-Mapper" />
+        <module name="WXVideos-Mini-api" />
+        <module name="WXVideos-Pojo" />
+        <module name="WXVideos-pojo" />
+        <module name="WXVideos-Service" />
+        <module name="WXVideoscommon" />
+        <module name="WXVideospojo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-generatorConfig" target="1.8" />
+      <module name="WXVideos" target="1.8" />
+      <module name="WXVideos-Common" target="1.8" />
+      <module name="WXVideos-common" target="1.8" />
+      <module name="WXVideos-Mapper" target="1.8" />
+      <module name="WXVideos-Mini-api" target="1.8" />
+      <module name="WXVideos-pojo" target="1.8" />
+      <module name="WXVideos-Pojo" target="1.8" />
+      <module name="WXVideos-Service" target="1.8" />
+      <module name="WXVideoscommon" target="1.8" />
+      <module name="WXVideospojo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
