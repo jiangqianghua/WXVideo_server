@@ -1,10 +1,15 @@
-package com.jqh.controller;
+package com.jqh.utils;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FFMpegTest {
 
+    // 合并音视频
+    //ffmpeg -i video.mp4 -i bgm1.mp3 -t 7 -y bgmvideo.mp4
     private String ffmpegExe ;
     public FFMpegTest(String ffmpegExe){
         this.ffmpegExe = ffmpegExe ;
@@ -20,9 +25,27 @@ public class FFMpegTest {
             System.out.print(c);
         }
         System.out.println();
-//        ProcessBuilder process = new ProcessBuilder(command);
-//        process.start();
-        
+        ProcessBuilder builder = new ProcessBuilder(command);
+        Process process = builder.start();
+        InputStream errorStream = process.getErrorStream();
+        InputStreamReader inputStreamReader = new InputStreamReader(errorStream);
+        BufferedReader br = new BufferedReader(inputStreamReader);
+
+        String line = "";
+        while ((line = br.readLine()) != null){
+
+        }
+        if(br != null){
+            br.close();
+        }
+        if(inputStreamReader != null){
+            inputStreamReader.close();
+        }
+
+        if(errorStream != null){
+            errorStream.close();
+        }
+
         System.out.println("convertor over!");
     }
     public static void main(String[] args) {
