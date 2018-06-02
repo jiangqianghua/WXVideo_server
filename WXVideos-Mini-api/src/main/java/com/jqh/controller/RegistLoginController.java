@@ -7,6 +7,7 @@ import com.jqh.utils.MD5Utils;
 import com.jqh.vo.UsersVo;
 import com.utils.TimeUtils;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,12 +89,24 @@ public class RegistLoginController extends BaseController{
         if(userResult != null){
             userResult.setPassword("");
 
-            UsersVo usersVo = setUserRedisSessionToken(user);
+            UsersVo usersVo = setUserRedisSessionToken(userResult);
 
             return JSONResult.ok(usersVo);
         }else{
             return JSONResult.errorMsg("用户或密码不正确");
         }
+
+    }
+
+
+    @ApiOperation(value = "用户注销",notes = "用户注销接口")
+    @ApiImplicitParam(name="userId",value = "用户id" ,required = true
+    ,dataType = "String", paramType = "query")
+    @PostMapping("/logout")
+    public JSONResult logout(String userId) throws  Exception{
+
+        redis.del(USER_REDIS_SESSION+":"+userId);
+        return JSONResult.ok();
 
     }
 }
