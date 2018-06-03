@@ -9,14 +9,12 @@ import com.jqh.service.VideoService;
 import com.jqh.utils.FetchVideoCover;
 import com.jqh.utils.JSONResult;
 import com.jqh.utils.MergeVideoMp3;
+import com.jqh.utils.PageResult;
 import io.swagger.annotations.*;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -211,4 +209,49 @@ public class VideoController extends BaseController{
         videoService.updateVideoCover(videoId,uploadPathDB);
         return JSONResult.ok(uploadPathDB);
     }
+
+    @ApiOperation(value = "分页查询视频",notes = "分页查询视频")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="page",value = "第几页" ,required = false
+                    ,dataType = "Integer", paramType = "query"),
+            @ApiImplicitParam(name="pageSize",value = "每页显示记录条数" ,required = false
+                    ,dataType = "Integer", paramType = "query")
+    })
+    @GetMapping(value = "/showAll1")
+    public JSONResult showAll1(Integer page , Integer pageSize) throws Exception{
+        if(page == null)
+            page = 1;
+        if(pageSize == null)
+            pageSize = 5 ;
+
+        PageResult pageResult = videoService.getAllVideos(page,pageSize);
+        return JSONResult.ok(pageResult);
+    }
+
+    @ApiOperation(value = "分页查询视频",notes = "分页查询视频")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="page",value = "第几页" ,required = false
+                    ,dataType = "Integer", paramType = "query"),
+            @ApiImplicitParam(name="pageSize",value = "每页显示记录条数" ,required = false
+                    ,dataType = "Integer", paramType = "query"),
+            @ApiImplicitParam(name="isSaveRecord",value = "是否保存记录" ,required = false
+                    ,dataType = "Integer", paramType = "query")
+    })
+    @PostMapping(value = "/showAll")
+    public JSONResult showAll(@RequestBody Videos video,Integer isSaveRecord ,Integer page , Integer pageSize) throws Exception{
+        if(page == null)
+            page = 1;
+        if(pageSize == null)
+            pageSize = 5 ;
+
+        PageResult pageResult = videoService.getAllVideos(video,isSaveRecord,page,pageSize);
+        return JSONResult.ok(pageResult);
+    }
+
+    @ApiOperation(value = "热搜词",notes = "热搜")
+    @GetMapping(value = "/hot")
+    public JSONResult hot() throws Exception{
+        return JSONResult.ok(videoService.getHotWords());
+    }
+
 }

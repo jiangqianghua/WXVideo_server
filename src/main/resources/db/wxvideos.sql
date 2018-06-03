@@ -83,3 +83,25 @@ create table `comments`(
 insert into bgm values('1','江强华','bgm1','/bgm/bgm1.mp3');
 insert into bgm values('2','胡丹','bgm2','/bgm/bgm2.mp3');
 insert into bgm values('3','丹丹','bgm3','/bgm/bgm3.mp3');
+
+-- 视频和用户表关联查询
+select v.*,u.face_image as face_image,u.nickname as nickname from videos v
+    left join users u on u.id = v.user_id
+    where 1=1 and v.status = 1
+    order by v.create_time desc
+
+
+insert into search_records values('1','江强华');
+insert into search_records values('2','江强华');
+insert into search_records values('3','胡丹');
+insert into search_records values('4','胡丹');
+insert into search_records values('5','胡丹');
+insert into search_records values('6','媳妇');
+
+-- 查询热搜词汇,按照频率排序
+select conent from search_records group by conent order by count(conent) desc;
+
+-- 修改videos，增加描述
+update videos set video_desc = '1' where id = '1806030Z3P0SWACH'
+
+select * from search_records;
