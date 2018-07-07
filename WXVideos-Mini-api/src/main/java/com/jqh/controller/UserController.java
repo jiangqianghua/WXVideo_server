@@ -3,9 +3,11 @@ package com.jqh.controller;
 import com.jqh.pojo.Users;
 import com.jqh.service.UserService;
 import com.jqh.utils.JSONResult;
+import com.jqh.vo.PublisherVideo;
 import com.jqh.vo.UsersVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
@@ -104,5 +106,33 @@ public class UserController extends BaseController {
 
         return JSONResult.ok(usersVo);
 
+    }
+    @ApiOperation(value = "查询发布者信息",notes = "查询发布者信息接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="loginUserId",value = "取消点赞用户的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="videoId",value = "被取消点赞视频id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="publishUserId",value = "被取消点赞视频创建的用户id" ,required = false
+                    ,dataType = "String", paramType = "query")
+    })
+    @PostMapping("/queryPublisher")
+    public JSONResult queryPublisher(String loginUserId ,String videoId,
+                                     String publishUserId) throws Exception{
+        // 未登陆也能查询
+        if(StringUtils.isEmpty(publishUserId)){
+            return JSONResult.errorMsg("参数不能为空");
+        }
+
+        Users users = userService.queryUserById(publishUserId);
+        UsersVo publisher = new UsersVo();
+        BeanUtils.copyProperties(users,publisher);
+        boolean userLikeVideo = userService.isUserLikeVideo(loginUserId,videoId);
+
+        PublisherVideo bean = new PublisherVideo();
+        bean.setUsersVo(publisher);
+        bean.setUserLikeVideo(userLikeVideo);
+
+        return JSONResult.ok(bean);
     }
 }

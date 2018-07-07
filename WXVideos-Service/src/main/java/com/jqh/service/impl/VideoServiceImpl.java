@@ -2,10 +2,9 @@ package com.jqh.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.jqh.mapper.SearchRecordsMapper;
-import com.jqh.mapper.VideosMapper;
-import com.jqh.mapper.VideosMapperCustom;
+import com.jqh.mapper.*;
 import com.jqh.pojo.SearchRecords;
+import com.jqh.pojo.UsersLikeVideos;
 import com.jqh.pojo.Videos;
 import com.jqh.service.VideoService;
 import com.jqh.utils.PageResult;
@@ -16,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -33,6 +33,12 @@ public class VideoServiceImpl implements VideoService{
 
     @Autowired
     private SearchRecordsMapper searchRecordsMapper ;
+
+    @Autowired
+    private UsersLikeVideosMapper usersLikeVideosMapper ;
+
+    @Autowired
+    private UsersMapper usersMapper ;
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -93,5 +99,35 @@ public class VideoServiceImpl implements VideoService{
     @Override
     public List<String> getHotWords(){
         return searchRecordsMapper.getHotWords();
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userLikeVideo(String userId, String videoId, String videoCreateId) {
+        String likeId = sid.nextShort();
+        UsersLikeVideos usersLikeVideos = new UsersLikeVideos();
+        usersLikeVideos.setId(likeId);
+        usersLikeVideos.setUserId(userId);
+        usersLikeVideos.setVideoId(videoId);
+        usersLikeVideosMapper.insert(usersLikeVideos);
+
+        videosMapperCustom.addVideoLikeCount(videoId);
+
+        usersMapper.addReceiveLikeCount(userId);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userUnLikeVideo(String userId, String videoId, String videoCreateId) {
+        // 删除关系
+        Example example = new Example(UsersLikeVideos.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        criteria.andEqualTo("videoId",videoId);
+        usersLikeVideosMapper.deleteByExample(example);
+
+        videosMapperCustom.reduceVideoLikeCount(videoId);
+
+        usersMapper.reduceReceiveLikeCount(userId);
     }
 }

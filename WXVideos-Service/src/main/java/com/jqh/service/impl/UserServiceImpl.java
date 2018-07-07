@@ -1,14 +1,19 @@
 package com.jqh.service.impl;
 
+import com.jqh.mapper.UsersLikeVideosMapper;
 import com.jqh.mapper.UsersMapper;
 import com.jqh.pojo.Users;
+import com.jqh.pojo.UsersLikeVideos;
 import com.jqh.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,6 +23,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private Sid sid ;
+
+
+    @Autowired
+    private UsersLikeVideosMapper usersLikeVideosMapper;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -48,7 +57,7 @@ public class UserServiceImpl implements UserService {
         return result ;
     }
 
-
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void updateUserInfo(Users user) {
         Example userExample = new Example(Users.class);
@@ -57,11 +66,29 @@ public class UserServiceImpl implements UserService {
         userMapper.updateByExampleSelective(user,userExample);
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public Users queryUserById(String userId) {
         Example userExample = new Example(Users.class);
         Example.Criteria criteria = userExample.createCriteria();
         criteria.andEqualTo("id",userId);
         return userMapper.selectOneByExample(userExample);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public boolean isUserLikeVideo(String userId, String videoId) {
+
+        if(StringUtils.isEmpty(userId) ||StringUtils.isEmpty(videoId))
+            return false ;
+        Example example = new Example(UsersLikeVideos.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        criteria.andEqualTo("videoId",videoId);
+        List<UsersLikeVideos> likeVideosList =  usersLikeVideosMapper.selectByExample(example);
+        if(likeVideosList != null && likeVideosList.size() > 0){
+            return true ;
+        }
+        return false;
     }
 }

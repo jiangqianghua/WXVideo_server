@@ -105,3 +105,5 @@ select conent from search_records group by conent order by count(conent) desc;
 update videos set video_desc = '1' where id = '1806030Z3P0SWACH'
 
 select * from search_records;
+-- 清空表
+truncate users_like_videos

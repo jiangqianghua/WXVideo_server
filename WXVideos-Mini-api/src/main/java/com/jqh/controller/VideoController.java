@@ -254,4 +254,34 @@ public class VideoController extends BaseController{
         return JSONResult.ok(videoService.getHotWords());
     }
 
+    @ApiOperation(value = "用户点赞喜欢视频",notes = "用户点赞喜欢视频接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="userId",value = "点赞用户的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="videoId",value = "被点赞视频id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="videoCreateId",value = "被点赞视频创建的用户id" ,required = false
+                    ,dataType = "String", paramType = "query")
+    })
+    @PostMapping(value="/userLike")
+    public JSONResult userLike(String userId, String videoId, String videoCreateId)throws Exception{
+        videoService.userLikeVideo(userId,videoId,videoCreateId);
+        return JSONResult.ok();
+    }
+
+    @ApiOperation(value = "用户取消点赞喜欢视频",notes = "用户取消点赞喜欢视频接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="userId",value = "取消点赞用户的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="videoId",value = "被取消点赞视频id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="videoCreateId",value = "被取消点赞视频创建的用户id" ,required = false
+                    ,dataType = "String", paramType = "query")
+    })
+    @PostMapping(value="/userUnLike")
+    public JSONResult userUnLike(String userId, String videoId, String videoCreateId)throws Exception{
+        videoService.userUnLikeVideo(userId,videoId,videoCreateId);
+        return  JSONResult.ok();
+    }
+
 }
