@@ -284,4 +284,28 @@ public class VideoController extends BaseController{
         return  JSONResult.ok();
     }
 
+    @PostMapping(value="/showMyLike")
+    public JSONResult showMyLike(String userId , Integer page ,
+                                 Integer pageSize) throws  Exception{
+        if(page == null)
+            page = 1 ;
+        if(pageSize == null)
+            pageSize = 5 ;
+        PageResult videoList = videoService.queryMyLikeVideos(userId,page,pageSize);
+        return JSONResult.ok(videoList);
+    }
+
+    @PostMapping(value="/showMyFollow")
+    public JSONResult showMyFollow(String userId , Integer page ,
+                                 Integer pageSize) throws  Exception{
+        if(page == null)
+            page = 1 ;
+        if(pageSize == null)
+            pageSize = 5 ;
+        PageResult videoList = videoService.queryMyFollowVideos(userId,page,pageSize);
+        return JSONResult.ok(videoList);
+    }
+
+
+
 }

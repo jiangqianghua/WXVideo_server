@@ -59,4 +59,23 @@ public interface VideoService {
      * @param videoCreateId 被点击视频创建者的id
      */
     public void userUnLikeVideo(String userId,String videoId,String videoCreateId);
+
+    /**
+     * 获取点赞的视频
+     * @param userId
+     * @param page
+     * @param pageSize
+     */
+    public PageResult queryMyLikeVideos(String userId, Integer page , Integer pageSize);
+
+    /**
+     * 获取关注的视频
+     * @param userId
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    public PageResult queryMyFollowVideos(String userId, Integer page , Integer pageSize);
+
+
 }

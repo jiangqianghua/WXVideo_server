@@ -76,6 +76,7 @@ public class VideoServiceImpl implements VideoService{
     @Override
     public PageResult getAllVideos(Videos video, Integer isSaveRecord, Integer page, Integer pageSize) {
         String desc = video.getVideoDesc();
+        String userId = video.getUserId();
         if(isSaveRecord != null && isSaveRecord == 1
                 && !StringUtils.isEmpty(desc)){
             // 保存查询记录
@@ -84,8 +85,9 @@ public class VideoServiceImpl implements VideoService{
             recode.setConent(desc);
             searchRecordsMapper.insert(recode);
         }
+
         PageHelper.startPage(page,pageSize);
-        List<VideosVo> list = videosMapperCustom.queryAllVideos(desc);
+        List<VideosVo> list = videosMapperCustom.queryAllVideos(desc,userId);
         PageInfo<VideosVo> pageList = new PageInfo<>(list);
         PageResult pageResult = new PageResult();
         pageResult.setPage(page);
@@ -129,5 +131,33 @@ public class VideoServiceImpl implements VideoService{
         videosMapperCustom.reduceVideoLikeCount(videoId);
 
         usersMapper.reduceReceiveLikeCount(userId);
+    }
+
+    @Override
+    public PageResult queryMyLikeVideos(String userId, Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        List<VideosVo> list = videosMapperCustom.queryMyLikeVideos(userId);
+        PageInfo<VideosVo> pageList = new PageInfo<>(list);
+
+        PageResult pageResult = new PageResult();
+        pageResult.setTotal(pageList.getPages());
+        pageResult.setRows(list);
+        pageResult.setPage(page);
+        pageResult.setRecords(pageList.getTotal());
+        return pageResult;
+    }
+
+    @Override
+    public PageResult queryMyFollowVideos(String userId, Integer page, Integer pageSize) {
+        PageHelper.startPage(page,pageSize);
+        List<VideosVo> list = videosMapperCustom.queryMyFollowVideos(userId);
+        PageInfo<VideosVo> pageList = new PageInfo<>(list);
+
+        PageResult pageResult = new PageResult();
+        pageResult.setTotal(pageList.getPages());
+        pageResult.setRows(list);
+        pageResult.setPage(page);
+        pageResult.setRecords(pageList.getTotal());
+        return pageResult;
     }
 }

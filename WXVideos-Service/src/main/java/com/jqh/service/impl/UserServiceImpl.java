@@ -1,8 +1,10 @@
 package com.jqh.service.impl;
 
+import com.jqh.mapper.UsersFansMapper;
 import com.jqh.mapper.UsersLikeVideosMapper;
 import com.jqh.mapper.UsersMapper;
 import com.jqh.pojo.Users;
+import com.jqh.pojo.UsersFans;
 import com.jqh.pojo.UsersLikeVideos;
 import com.jqh.service.UserService;
 import org.n3r.idworker.Sid;
@@ -20,6 +22,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersMapper userMapper ;
+
+    @Autowired
+    private UsersFansMapper usersFansMapper ;
 
     @Autowired
     private Sid sid ;
@@ -90,5 +95,43 @@ public class UserServiceImpl implements UserService {
             return true ;
         }
         return false;
+    }
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void saveUserFanRelation(String userId, String fanId) {
+        String resId = sid.nextShort();
+        UsersFans usersFans = new UsersFans();
+        usersFans.setFanId(fanId);
+        usersFans.setUserId(userId);
+        usersFans.setId(resId);
+        usersFansMapper.insert(usersFans);
+
+        userMapper.addFansCount(userId);
+        userMapper.addFollersCount(fanId);
+    }
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void deleteUserFanRelation(String userId, String fanId) {
+        Example example = new Example(UsersFans.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        criteria.andEqualTo("fanId",fanId);
+
+        usersFansMapper.deleteByExample(example);
+
+        userMapper.reduceFansCount(userId);
+        userMapper.reduceFollersCount(fanId);
+    }
+
+    @Override
+    public boolean queryIfFollow(String userId, String fanId) {
+        Example example = new Example(UsersFans.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        criteria.andEqualTo("fanId",fanId);
+        List<UsersFans> usersFansList = usersFansMapper.selectByExample(example);
+        if(usersFansList != null && usersFansList.size() > 0)
+            return true ;
+        return false ;
     }
 }

@@ -107,3 +107,11 @@ update videos set video_desc = '1' where id = '1806030Z3P0SWACH'
 select * from search_records;
 -- 清空表
 truncate users_like_videos
+
+
+select v.*,u.face_image as face_image , u.nickname as nickname from videos v
+    left join users u on v.user_id = u.id
+    where
+      v.user_id in (select uf.user_id from users_fans uf where uf.fan_id = '18060277D28X28ZC')
+      and v.status = 1
+    order by v.create_time desc

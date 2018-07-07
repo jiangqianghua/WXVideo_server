@@ -20,6 +20,11 @@ public class UsersVo {
     private String userToken ;
 
     /**
+     * 是否被当前用户关注
+     */
+    private boolean isFollow ;
+
+    /**
      * 用户名称
      */
     @ApiModelProperty(value="用户名",name="username",example = "jiangqianghua",required = true)
@@ -212,5 +217,13 @@ public class UsersVo {
 
     public void setUserToken(String userToken) {
         this.userToken = userToken;
+    }
+
+    public boolean isFollow() {
+        return isFollow;
+    }
+
+    public void setFollow(boolean follow) {
+        isFollow = follow;
     }
 }

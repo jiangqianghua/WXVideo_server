@@ -88,11 +88,16 @@ public class UserController extends BaseController {
 
     }
 
+
     @ApiOperation(value = "用户查询",notes = "用户查询")
-    @ApiImplicitParam(name="userId",value = "用户id" ,required = true
-            ,dataType = "String", paramType = "query")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "userId", value = "用户id", required = true
+                    , dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "fanId", value = "哪个用户来查询", required = true
+                    , dataType = "String", paramType = "query")
+    })
     @PostMapping("/query")
-    public JSONResult query(String userId) throws  Exception{
+    public JSONResult query(String userId,String fanId) throws  Exception{
         if(StringUtils.isEmpty(userId)){
             return JSONResult.errorMsg("用户id不能为空");
         }
@@ -103,6 +108,9 @@ public class UserController extends BaseController {
         }
         UsersVo usersVo = new UsersVo();
         BeanUtils.copyProperties(users,usersVo);
+
+        boolean isFollow = userService.queryIfFollow(userId,fanId);
+        usersVo.setFollow(isFollow);
 
         return JSONResult.ok(usersVo);
 
@@ -134,5 +142,41 @@ public class UserController extends BaseController {
         bean.setUserLikeVideo(userLikeVideo);
 
         return JSONResult.ok(bean);
+    }
+
+    @ApiOperation(value = "关注用户",notes = "关注用户接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="userId",value = "被关注人的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="userId",value = "关注人的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+    })
+    @PostMapping("/beyourfans")
+    public JSONResult beyourfans(String userId,String fanId) throws Exception{
+        if(StringUtils.isEmpty(userId) ||
+                StringUtils.isEmpty(fanId)){
+            return JSONResult.errorMsg("");
+        }
+
+        userService.saveUserFanRelation(userId,fanId);
+        return JSONResult.ok("关注成功");
+    }
+
+    @ApiOperation(value = "取消关注用户",notes = "取消关注用户接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="userId",value = "被取消关注人的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name="userId",value = "取消关注人的id" ,required = false
+                    ,dataType = "String", paramType = "query"),
+    })
+    @PostMapping("/dontbeyourfans")
+    public JSONResult dontbeyourfans(String userId,String fanId) throws Exception{
+        if(StringUtils.isEmpty(userId) ||
+                StringUtils.isEmpty(fanId)){
+            return JSONResult.errorMsg("");
+        }
+
+        userService.deleteUserFanRelation(userId,fanId);
+        return JSONResult.ok("取消关注成功");
     }
 }
