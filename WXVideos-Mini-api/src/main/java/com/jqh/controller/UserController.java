@@ -1,6 +1,7 @@
 package com.jqh.controller;
 
 import com.jqh.pojo.Users;
+import com.jqh.pojo.UsersReport;
 import com.jqh.service.UserService;
 import com.jqh.utils.JSONResult;
 import com.jqh.vo.PublisherVideo;
@@ -13,10 +14,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -179,4 +177,17 @@ public class UserController extends BaseController {
         userService.deleteUserFanRelation(userId,fanId);
         return JSONResult.ok("取消关注成功");
     }
+
+    /**
+     * 举报用户
+     * @param usersReport
+     * @return
+     * @throws Exception
+     */
+    @PostMapping("/reportUser")
+    public JSONResult reportUser(@RequestBody UsersReport usersReport) throws  Exception{
+        userService.reportUser(usersReport);
+        return JSONResult.ok("举报成功");
+    }
+
 }

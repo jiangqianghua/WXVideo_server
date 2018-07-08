@@ -3,9 +3,11 @@ package com.jqh.service.impl;
 import com.jqh.mapper.UsersFansMapper;
 import com.jqh.mapper.UsersLikeVideosMapper;
 import com.jqh.mapper.UsersMapper;
+import com.jqh.mapper.UsersReportMapper;
 import com.jqh.pojo.Users;
 import com.jqh.pojo.UsersFans;
 import com.jqh.pojo.UsersLikeVideos;
+import com.jqh.pojo.UsersReport;
 import com.jqh.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -25,6 +28,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersFansMapper usersFansMapper ;
+
+    @Autowired
+    private UsersReportMapper usersReportMapper ;
 
     @Autowired
     private Sid sid ;
@@ -133,5 +139,18 @@ public class UserServiceImpl implements UserService {
         if(usersFansList != null && usersFansList.size() > 0)
             return true ;
         return false ;
+    }
+
+    /**
+     * 举报
+     * @param usersReport
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void reportUser(UsersReport usersReport) {
+        String id =  sid.nextShort();
+        usersReport.setId(id);
+        usersReport.setCreateTime(new Date());
+        usersReportMapper.insert(usersReport);
     }
 }

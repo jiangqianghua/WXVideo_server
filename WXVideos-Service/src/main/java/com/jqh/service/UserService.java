@@ -1,6 +1,7 @@
 package com.jqh.service;
 
 import com.jqh.pojo.Users;
+import com.jqh.pojo.UsersReport;
 
 public interface UserService {
     /**
@@ -61,4 +62,9 @@ public interface UserService {
      */
     public boolean queryIfFollow(String userId ,String fanId);
 
+    /**
+     * 举报用户
+     * @param usersReport
+     */
+    public void reportUser(UsersReport usersReport);
 }
