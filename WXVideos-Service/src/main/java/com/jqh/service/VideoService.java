@@ -1,5 +1,6 @@
 package com.jqh.service;
 
+import com.jqh.pojo.Comments;
 import com.jqh.pojo.Videos;
 import com.jqh.utils.PageResult;
 
@@ -77,5 +78,19 @@ public interface VideoService {
      */
     public PageResult queryMyFollowVideos(String userId, Integer page , Integer pageSize);
 
+    /**
+     * 保存留言
+     * @param comment
+     */
+    public void saveComment(Comments comment);
+
+    /**
+     * 分页获取评论列表
+     * @param videoId
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    public PageResult getAllComments(String videoId, Integer page , Integer pageSize);
 
 }

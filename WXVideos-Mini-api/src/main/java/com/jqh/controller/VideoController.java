@@ -2,6 +2,7 @@ package com.jqh.controller;
 
 import com.jqh.enums.VideoStatusEnum;
 import com.jqh.pojo.Bgm;
+import com.jqh.pojo.Comments;
 import com.jqh.pojo.Users;
 import com.jqh.pojo.Videos;
 import com.jqh.service.BgmService;
@@ -305,6 +306,31 @@ public class VideoController extends BaseController{
         PageResult videoList = videoService.queryMyFollowVideos(userId,page,pageSize);
         return JSONResult.ok(videoList);
     }
+
+    @PostMapping("/saveComment")
+    public JSONResult saveComment(@RequestBody Comments comment) throws Exception{
+        videoService.saveComment(comment);
+        return JSONResult.ok();
+    }
+
+
+    @PostMapping(value="/getVideoComments")
+    public JSONResult getVideoComments(String videoId , Integer page ,
+                                 Integer pageSize) throws  Exception{
+        if(page == null)
+            page = 1 ;
+        if(pageSize == null)
+            pageSize = 5 ;
+        PageResult commentList = videoService.getAllComments(videoId,page,pageSize);
+        return JSONResult.ok(commentList);
+    }
+
+//    public JSONResult getVideoComments(String videoId, Integer page ,Integer pageSize) throws Exception{
+//        if(StringUtils.isEmpty(videoId)){
+//            return JSONResult.ok();
+//        }
+//        return
+//    }
 
 
 

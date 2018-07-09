@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ded7f0ad-ccff-4b13-996e-073c3ae0d9d9" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/CommentsVo.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/UserController.java" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/UserService.java" afterPath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/CommentsMapper.java" afterPath="$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/CommentsMapper.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/CommentsMapper.xml" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/CommentsMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/target/classes/com/jqh/WebMvcConfig.class" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/target/classes/com/jqh/WebMvcConfig.class" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Mini-api/target/classes/com/jqh/controller/VideoController.class" afterPath="$PROJECT_DIR$/WXVideos-Mini-api/target/classes/com/jqh/controller/VideoController.class" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java" afterPath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java" afterPath="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Service/target/classes/com/jqh/service/VideoService.class" afterPath="$PROJECT_DIR$/WXVideos-Service/target/classes/com/jqh/service/VideoService.class" />
+      <change beforePath="$PROJECT_DIR$/WXVideos-Service/target/classes/com/jqh/service/impl/VideoServiceImpl.class" afterPath="$PROJECT_DIR$/WXVideos-Service/target/classes/com/jqh/service/impl/VideoServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,111 +34,138 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="CommentsVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/CommentsVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1250#1251#0" expanded="true" />
+                <element signature="e#1284#1285#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1360#1361#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1435#1436#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1594#1595#0" expanded="true" />
+                <element signature="e#1625#1626#0" expanded="true" />
+                <element signature="e#1673#1674#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideosVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/VideosVo.java">
+      <file leaf-file-name="VideosMapperCustom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/VideosMapperCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wxvideos.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db/wxvideos.sql">
+      <file leaf-file-name="CommentsMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/CommentsMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="75" column="54" lean-forward="true" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+            <state relative-caret-position="161">
+              <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/UserController.java">
+      <file leaf-file-name="VideoServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+            <state relative-caret-position="97">
+              <caret line="182" column="46" lean-forward="false" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6407">
+              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentsMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/CommentsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="17" column="65" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideosMapperCustom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapperCustom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideosMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersReportMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/UsersReportMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comments.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/Comments.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/UsersVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="222" column="23" lean-forward="false" selection-start-line="222" selection-start-column="15" selection-end-line="222" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Common/src/main/java/com/jqh/utils/JSONResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <folding>
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebMvcConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="30" column="90" lean-forward="false" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersReport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/UsersReport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="166" column="1" lean-forward="true" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiniInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/interceptor/MiniInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-706">
-              <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,6 +192,8 @@
       <find>userId</find>
       <find>getAllVideos</find>
       <find>reportUser</find>
+      <find>videoService</find>
+      <find>commentsMapper</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,9 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/WXVideos-Common/src/main/java/com/utils/TimeUtils.java" />
-        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/HelloWorldController.java" />
         <option value="$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-generatorConfig/pom.xml" />
@@ -208,19 +242,22 @@
         <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/interceptor/MiniInterceptor.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/RegistLoginController.java" />
         <option value="$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/PublisherVideo.java" />
-        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/UsersMapper.xml" />
         <option value="$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/UsersVo.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/UsersMapper.java" />
-        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java" />
-        <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/VideosMapperCustom.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapperCustom.xml" />
-        <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/wxvideos.sql" />
         <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/UserService.java" />
         <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/CommentsMapper.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/CommentsVo.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/CommentsMapper.xml" />
       </list>
     </option>
   </component>
@@ -298,27 +335,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="WXVideoscommon" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="WXVideospojo" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="WXVideospojo" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,6 +346,41 @@
               <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
               <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
@@ -387,6 +438,143 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mini-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Mini-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jqh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jqh" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jqh" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WXVideos" type="462c0819:PsiDirectoryNode" />
+              <item name="WXVideos-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="WXVideoscommon" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="WXVideospojo" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="WXVideos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="WXVideospojo" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -407,6 +595,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,21 +800,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="39" width="1260" height="679" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40753424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32101807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46061644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40582192" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -664,35 +854,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1255">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/Bgm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Common/src/main/java/com/jqh/utils/RedisOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/ProcessBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="1003" column="19" lean-forward="false" selection-start-line="1003" selection-start-column="19" selection-end-line="1003" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/FFMpegTest.java" />
     <entry file="file://$PROJECT_DIR$/WXVideos-Common/src/main/java/com/jqh/utils/FFMpegTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -857,14 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/VideosMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -894,67 +1047,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6509">
-          <caret line="303" column="26" lean-forward="false" selection-start-line="303" selection-start-column="26" selection-end-line="303" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1702">
-          <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/VideosMapperCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/UsersMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapperCustom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1541">
-          <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="72" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/wxvideos.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="75" column="54" lean-forward="true" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+        <state relative-caret-position="1725">
+          <caret line="75" column="54" lean-forward="false" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Common/src/main/java/com/jqh/utils/JSONResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="621">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="e#627#628#0" expanded="true" />
@@ -965,35 +1075,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="1541">
           <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="2967">
           <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/VideosVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/UsersVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="4140">
           <caret line="222" column="23" lean-forward="false" selection-start-line="222" selection-start-column="15" selection-end-line="222" selection-end-column="23" />
           <folding />
         </state>
@@ -1001,35 +1103,167 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/UsersReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="166" column="1" lean-forward="true" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="30" column="90" lean-forward="false" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/interceptor/MiniInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-706">
-          <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        <state relative-caret-position="3105">
+          <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+        <state relative-caret-position="-337">
+          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/interceptor/MiniInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="30" column="84" lean-forward="false" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/VideosVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/pojo/Comments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/UsersReportMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/java/com/jqh/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6407">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Pojo/src/main/java/com/jqh/vo/CommentsVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="18" />
+          <folding>
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/CommentsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mapper/src/main/java/com/jqh/mapper/VideosMapperCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/VideosMapperCustom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Service/src/main/java/com/jqh/service/impl/VideoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="182" column="46" lean-forward="false" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WXVideos-Mini-api/src/main/resources/mapper/CommentsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="65" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
