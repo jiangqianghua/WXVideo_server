@@ -11,6 +11,18 @@ public class Comments {
     private String id;
 
     /**
+     * 父留言的id
+     */
+    @Column(name = "father_comment_id")
+    private String fatherCommentId;
+
+    /**
+     * 给谁回复
+     */
+    @Column(name = "to_user_id")
+    private String toUserId;
+
+    /**
      * 视频id
      */
     @Column(name = "video_id")
@@ -46,6 +58,42 @@ public class Comments {
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * 获取父留言的id
+     *
+     * @return father_comment_id - 父留言的id
+     */
+    public String getFatherCommentId() {
+        return fatherCommentId;
+    }
+
+    /**
+     * 设置父留言的id
+     *
+     * @param fatherCommentId 父留言的id
+     */
+    public void setFatherCommentId(String fatherCommentId) {
+        this.fatherCommentId = fatherCommentId;
+    }
+
+    /**
+     * 获取给谁回复
+     *
+     * @return to_user_id - 给谁回复
+     */
+    public String getToUserId() {
+        return toUserId;
+    }
+
+    /**
+     * 设置给谁回复
+     *
+     * @param toUserId 给谁回复
+     */
+    public void setToUserId(String toUserId) {
+        this.toUserId = toUserId;
     }
 
     /**

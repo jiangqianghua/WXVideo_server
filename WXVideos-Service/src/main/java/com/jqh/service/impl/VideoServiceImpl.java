@@ -9,6 +9,7 @@ import com.jqh.pojo.UsersLikeVideos;
 import com.jqh.pojo.Videos;
 import com.jqh.service.VideoService;
 import com.jqh.utils.PageResult;
+import com.jqh.utils.TimeAgoUtils;
 import com.jqh.vo.CommentsVo;
 import com.jqh.vo.VideosVo;
 import org.n3r.idworker.Sid;
@@ -182,10 +183,10 @@ public class VideoServiceImpl implements VideoService{
         PageHelper.startPage(page,pageSize);
         List<CommentsVo> list = commentsMapper.queryComments(videoId);
 
-//        for(CommentsVo commentsVo : list){
-//            String timeAgo = TimeAgoUtils.format(commentsVo.getCreateTime());
-//            commentsVo.setTimeAgoStr(timeAgo);
-//        }
+        for(CommentsVo commentsVo : list){
+            String timeAgo = TimeAgoUtils.format(commentsVo.getCreateTime());
+            commentsVo.setTimeAgoStr(timeAgo);
+        }
 
         PageInfo<CommentsVo> pageList = new PageInfo<>(list);
         PageResult grid = new PageResult();

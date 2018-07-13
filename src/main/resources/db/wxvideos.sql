@@ -78,6 +78,16 @@ create table `comments`(
 ) comment '留言表';
 
 
+create table `comments`(
+    `id` varchar(64) not null comment '全局唯一id',
+    `father_comment_id` varchar(64) comment '父留言的id',
+    `to_user_id` varchar(64) comment '给谁回复',
+    `video_id` varchar(64) not null comment '视频id',
+    `from_user_id` varchar(64) not null comment '留言用户id',
+    `comment` text  not null comment '留言信息',
+    `create_time` timestamp not null default current_timestamp,
+    primary key(`id`)
+) comment '留言表';
 
 
 insert into bgm values('1','江强华','bgm1','/bgm/bgm1.mp3');

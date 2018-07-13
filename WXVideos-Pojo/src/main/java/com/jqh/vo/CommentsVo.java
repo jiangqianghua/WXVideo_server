@@ -34,6 +34,8 @@ public class CommentsVo {
      */
     private String nickname ;
 
+    private String toNickName ;
+
     private String timeAgoStr ;
 
     public String getTimeAgoStr() {
@@ -99,5 +101,13 @@ public class CommentsVo {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public String getToNickName() {
+        return toNickName;
+    }
+
+    public void setToNickName(String toNickName) {
+        this.toNickName = toNickName;
     }
 }
